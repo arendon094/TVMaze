@@ -1,0 +1,39 @@
+<div class="container">
+	<h1>{{tvshow.name}}</h2>
+	
+	<div ng-if="tvshow.genres" style="float: left;">
+		<span ng-repeat="genre in tvshow.genres">
+			|{{genre}}
+		</span>
+	</div>
+	</br>
+	<div ng-if="tvshow.image !== null" style="float: left;">
+		<img src="{{tvshow.image.medium}}"/>
+	</div>
+	<div ng-if="tvshow.image === null" style="float: left;">
+		<img src="images/no_show.png"/>
+	</div>
+	
+	<div>
+		<h3>Show Summary</h3><hr>
+		<div ng-bind-html="tvshow.summary | trustHTML"></div>
+	</div>
+	</br></br></br></br></br></br></br>
+	<div class="container">
+		<h3>Cast</h3><hr>
+		<div class="row" ng-repeat="cast in tvshow._embedded.cast">
+			<div class="col-md-8" style="float: left;">
+				<span ng-if="cast.character.image !== null">
+					<img src="{{cast.character.image.medium}}" style="height:200px;"/>
+				</span>
+				<span ng-if="(cast.character.image === null) && (cast.person.image !== null)">
+					<img src="{{cast.person.image.medium}}" style="height:200px;"/>
+				</span>
+				<span ng-if="(cast.character.image === null) && (cast.person.image === null)">
+					<img src="{{cast.person.image.medium}}" style="height:200px;"/>
+				</span>
+				{{cast.character.name}} played by {{cast.person.name}}
+			</div>
+		</div>
+	</div>
+</div>

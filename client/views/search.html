@@ -1,0 +1,30 @@
+<div class="search-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+
+				<form>
+					<h2 class="v-center">Welcome to the TV Maze Application</h2>
+					<p class="lead">Search for any TV show by name</p>
+
+					<div class="input-group">
+						<input type="text" class="form-control input-md" ng-model="name"/>
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-md btn-warning pull-right" 
+								ng-click="search()">
+								Search
+							</button>
+						</span>
+					</div>
+				</form>	
+
+				<div class="container" style="color: black;">
+					<div ng-repeat="r in tvshows">
+						<div result-preview result="r.show"></div>
+					</div>
+				</div>		
+
+			</div>
+		</div>
+	</div>
+</div>
