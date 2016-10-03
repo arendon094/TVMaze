@@ -1,0 +1,24 @@
+{
+  "name": "tvmaze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arendon094/TVMaze.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arendon094/TVMaze/issues"
+  },
+  "homepage": "https://github.com/arendon094/TVMaze#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "express": "^4.14.0",
+    "superagent": "^2.3.0"
+  }
+}
