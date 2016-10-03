@@ -1,0 +1,19 @@
+<div class="row" style="border:none; background: #EFEFEF; height:210px;">
+	<div class="col-xs-12">
+	
+		<span ng-if="result.image !== null">
+			<img src="{{result.image.medium}}" style="height:200px; margin-left:-15px; float: left;" />
+		</span>
+		<span ng-if="result.image === null">
+			<img src="images/no_show.png" style="height:200px; margin-left:-15px; float: left;" />
+		</span>
+	<!-- </div>
+	<div class="col-xs-9"> -->  
+		<h3>{{result.name}}</h3>	
+		<div style="font-size:12px;" ng-bind-html="result.summary | trustHTML"></div>	  
+    	<!-- <p style="font-size:10px; color:#03225C;">{{result.summary}}</p> -->
+    	<a href="/showinfo/{{result.id}}" class="btn btn-warning" style="float: right;">
+    		Details
+    	</a>
+	</div>
+</div>

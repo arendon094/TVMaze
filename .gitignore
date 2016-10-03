@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+node_modules/*
+=======
+**/node_modules
+>>>>>>> 0fd79fb308bb861a063502b7dadeb68c22eb1b43
